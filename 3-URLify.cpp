@@ -10,7 +10,7 @@ int main() {
 
     cout << "Inserte palabra con muchos espacios" << endl;
     getline(cin, sWord);
-    cout << "Inserte cantidad de caracteres"
+    cout << "Inserte cantidad de caracteres" << endl;
     cin >> iOriginal;
 
     for (int i = 0; i < (iOriginal + iAdded); i++) {
@@ -23,7 +23,11 @@ int main() {
         }
     }
 
-    cout << "Palabra URL: " << sWord << endl;
+    while (sWord.back() == ' ') {
+        sWord.pop_back();
+    }
+
+    cout << "Palabra URL: \"" << sWord << "\"" << endl;
 
     return 0;
 }
